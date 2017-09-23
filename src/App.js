@@ -5,6 +5,7 @@ import './Basic.css';
 
 import SearchBar from './components/SearchBar.js';
 import SearchResults from './components/SearchResults.js';
+import Playlist from './components/Playlist.js';
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
             <SearchResults />
         {/* results */}
             {/* add to personal list */}
+            <Playlist />
         {/* personal playlist */}
             {/* rename list */}
             {/* minus from list */}

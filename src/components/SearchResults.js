@@ -6,7 +6,6 @@ class SearchResults extends Component {
 
     render(){
         return(
-        <div className="App-playlist">
           <div className="SearchResults">
             <h2>Results</h2>
             <div className="TrackList">
@@ -47,7 +46,6 @@ class SearchResults extends Component {
               </div>
             </div>
           </div>
-        </div>
         )
     }
 }
