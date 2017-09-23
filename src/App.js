@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './reset.css';
-import './App.css';
 import './Basic.css';
 
 import SearchBar from './components/SearchBar.js';
@@ -35,8 +34,8 @@ class App extends Component {
 
         <div className="App-playlist">
             <SearchResults searchResults={this.state.searchResults}/>
-        {/* results */}
-            {/* add to personal list */}
+                {/* results */}
+                {/* can add to personal list */}
             <Playlist />
         {/* personal playlist */}
             {/* rename list */}

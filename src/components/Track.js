@@ -7,7 +7,8 @@ class Track extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isRemoval: true
+            isRemoval: true,
+            symbol: '+'
         }   
     }
 
@@ -26,16 +27,19 @@ class Track extends Component {
                 <h3>{album}</h3>
                 <p>{artist} | {name}</p>
             </div>
-            <a className="Track-action">+</a>
+            <a className="Track-action" onClick={this._renderAction}>{this.state.symbol}</a>
         </div>
         )
     }
 
-    _renderAction = () => {
-        if(!this.state.isRemoval){
-            return "-"
+    _renderAction = (e) => {
+        e.preventDefault();
+        if(this.state.symbol === '-'){
+            this.state.isRemoval = false
+            return this.state.symbol = '+'
+        } else {
+            return this.state.symbol = '-'
         }
-        return "+"
     }
 }
 
