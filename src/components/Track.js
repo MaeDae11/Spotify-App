@@ -7,13 +7,13 @@ class Track extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isRemoval: True,
+            isRemoval: true,
             album: '',
             artist: '',
             name: ''
         }   
     }
-    
+
     render(){
         return(
         <div className="Track">

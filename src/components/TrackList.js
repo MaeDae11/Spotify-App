@@ -13,4 +13,12 @@ class TrackList extends Component {
             </div>
         )
     }
+
+    _sortThroughSearchResults = (props) => {
+        let tracks = props.map((prop) => {
+            
+        })
+    }
 }
+
+export default TrackList
