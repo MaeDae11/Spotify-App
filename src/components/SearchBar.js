@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../Basic.css';
 
 
 class SearchBar extends Component {
@@ -22,7 +22,7 @@ class SearchBar extends Component {
 
     _handleSearch = (e) => {
         e.preventDefault();
-        
+
     }
 }
 
