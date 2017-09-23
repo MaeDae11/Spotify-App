@@ -18,9 +18,10 @@ class SearchResults extends Component {
                 artist={artist}
                 album={album}
                 uri={uri}
+                onAdd={this.props.onAdd}
             />
         })
-        console.log(trackInfo)
+
         return(
           <div className="SearchResults">
             <h2>Results</h2>

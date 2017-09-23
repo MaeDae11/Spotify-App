@@ -3,12 +3,12 @@ import '../Basic.css';
 
 
 
+
 class Track extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isRemoval: true,
-            symbol: '+'
+            isRemoval: true
         }   
     }
 
@@ -27,20 +27,23 @@ class Track extends Component {
                 <h3>{album}</h3>
                 <p>{artist} | {name}</p>
             </div>
-            <a className="Track-action" onClick={this._renderAction}>{this.state.symbol}</a>
+            <a className="Track-action" onClick={this.props._renderAction}>{this._renderAction}</a>
         </div>
         )
     }
 
+    _addToPlaylist = (e, track) => {
+        this.props.addTrack(track)
+        e.preventDefault();
+    }
     _renderAction = (e) => {
         e.preventDefault();
-        if(this.state.symbol === '-'){
-            this.state.isRemoval = false
-            return this.state.symbol = '+'
-        } else {
-            return this.state.symbol = '-'
-        }
+        if(this.state.isRemoval === true){
+           return <a>-</a>
+        } 
+        return <a>+</a>
     }
+    
 }
 
 export default Track
