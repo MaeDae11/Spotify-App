@@ -10,7 +10,7 @@ class SearchResults extends Component {
             let name = searchResults['name'];
             let id = searchResults['id'];
             let artist = searchResults['artist'];
-            let album = searchResults['albumn'];
+            let album = searchResults['album'];
             let uri = searchResults['uri']
             return <TrackList 
                 key={id}
@@ -20,10 +20,11 @@ class SearchResults extends Component {
                 uri={uri}
             />
         })
+        console.log(trackInfo)
         return(
           <div className="SearchResults">
             <h2>Results</h2>
-            
+                {trackInfo}
           </div>
         )
     }

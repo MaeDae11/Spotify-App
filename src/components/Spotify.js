@@ -1,4 +1,4 @@
-import { CLIENT_ID, SECRET } from './SpotifyInfo.js';
+import { CLIENT_ID } from './SpotifyInfo.js';
 
 
 let accessToken = '';
@@ -42,7 +42,7 @@ const Spotify = {
             id: track.id,
             name: track.name,
             artist: track.artists[0].name,
-            album: track.album.name,
+            album: track.album['name'],
             uri: track.uri
             }));
         });
