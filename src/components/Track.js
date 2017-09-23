@@ -4,17 +4,33 @@ import '../Basic.css';
 
 
 class Track extends Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            isRemoval: True,
+            album: '',
+            artist: '',
+            name: ''
+        }   
+    }
+    
     render(){
         return(
         <div className="Track">
             <div className="Track-information">
-              <h3>Tiny Dancer</h3>
-              <p>Elton John | Madman Across The Water</p>
+              <h3>{this.props.state.album}</h3>
+              <p>{this.props.state.artist} | {this.props.state.name}</p>
             </div>
-            <a className="Track-action">+</a>
+            <a className="Track-action">{this._renderAction}</a>
         </div>
         )
+    }
+
+    _renderAction = () => {
+        if(this.state.isRemoval){
+            return "-"
+        }
+        return "+"
     }
 }
 
