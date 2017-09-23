@@ -18,14 +18,11 @@ class App extends Component {
 
     spotifySearch = (term) => {
         Spotify.search(term)
-        .then(searchResults => {
-            if(searchResults.length > 0){
-                searchResults: [];
-            }
-            this.setState({
-                searchResults: searchResults
-            })
-        })
+        // .then(searchResults => {
+        //     this.setState({
+        //         searchResults: searchResults
+        //     })
+        // })
     }
 
   render() {

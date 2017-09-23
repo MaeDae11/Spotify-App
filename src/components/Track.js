@@ -17,11 +17,11 @@ class Track extends Component {
     render(){
         return(
         <div className="Track">
-            <div className="Track-information">
+            {/* <div className="Track-information">
               <h3>{this.props.state.album}</h3>
               <p>{this.props.state.artist} | {this.props.state.name}</p>
             </div>
-            <a className="Track-action">{this._renderAction}</a>
+            <a className="Track-action">{this._renderAction}</a> */}
         </div>
         )
     }

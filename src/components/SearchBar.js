@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import '../Basic.css';
-import Spotify from './Spotify.js';
 
 class SearchBar extends Component {
     constructor(props){
         super(props);
         this.state = {
             term: ''
-        }
+        };
     }
 
 
     render(){
         return(
             <div className="SearchBar">
-                <input placeholder="Enter A Song Title" onChange={this._handleSearch}/>
-                <a onClick={this.handleSearch}>SEARCH</a>
+                <input placeholder="Enter A Song Title" onChange={this._handleTermChange}/>
+                <a onClick={this._handleSearch}>SEARCH</a>
           </div>
-        )
-    }
+        );
+    };
 
     _handleTermChange = (e) => {
         this.setState({
@@ -26,9 +25,10 @@ class SearchBar extends Component {
         });
     }
     _handleSearch = (e) => {
+        console.log("works")
         this.props.spotifySearch(this.state.term)
         e.preventDefault();
     }
-}
+};
 
 export default SearchBar
