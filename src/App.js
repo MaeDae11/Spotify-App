@@ -27,12 +27,28 @@ class App extends Component {
     };
 
     addTrack = (track) => {
+        let tracks = this.state.playlistTracks
         // if(this.track.id in this.state.playlistTracks){
         //     return
         // }
+        tracks.push(track)
         this.setState({
-            playlistTracks: track
+            playlistTracks: tracks
         })
+    };
+
+    removeTrack = (track) => {
+        let tracks = this.state.playlistTracks;
+        tracks = this.filter(currentTrack => currentTrack.id !== track.id);
+        this.setState({
+            playlistTracks: tracks
+        });
+    };
+
+    upsdatePlaylistName = (name) => {
+        this.setState({
+            playlistName: name
+        });
     };
 
   render() {
@@ -40,18 +56,21 @@ class App extends Component {
       <div className="App">
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <SearchBar spotifySearch={this.spotifySearch}/>
-            {/* search box */}
-            {/* search button */}
+
 
         <div className="App-playlist">
-            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack()}/>
-                {/* results */}
-                {/* can add to personal list */}
-            <Playlist defaultValue={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
-        {/* personal playlist */}
-            {/* rename list */}
-            {/* minus from list */}
-            {/* final save playlist to spotify */}
+            <SearchResults 
+                searchResults={this.state.searchResults} 
+                onAdd={this.addTrack}
+            />
+
+            <Playlist 
+                playlistName={this.state.playlistName} 
+                playlistTracks={this.state.playlistTracks}
+                onRemove={this.removeTrack}
+                onNameChange={this.upsdatePlaylistName}
+            />
+
         </div>
 
       </div>

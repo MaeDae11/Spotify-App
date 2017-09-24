@@ -13,35 +13,31 @@ class Track extends Component {
     }
 
     render(){
-        const {
-            key,
-            name,
-            artist,
-            album,
-            uri
-        } = this.props
 
         return(
-        <div className="Track" key={key}>
+        <div className="Track" key={this.props.key}>
             <div className="Track-information">
-                <h3>{album}</h3>
-                <p>{artist} | {name}</p>
+                <h3>{this.props.track.name}</h3>
+                <p>{this.props.track.artist} | {this.props.track.name}</p>
             </div>
-            <a className="Track-action" onClick={this.props._renderAction}>{this._renderAction}</a>
+            {this._renderAction()}
         </div>
         )
     }
 
-    _addToPlaylist = (e, track) => {
-        this.props.addTrack(track)
-        e.preventDefault();
+    _renderAction = () => {
+        if(this.props.isRemoval){
+            return <a className="Track-Action" onClick={this._removeTrack}>-</a>
+        }
+        return <a className="Track-Action" onClick={this._addTrack}>+</a>
     }
-    _renderAction = (e) => {
+    _addTrack = (e) => {
         e.preventDefault();
-        if(this.state.isRemoval === true){
-           return <a>-</a>
-        } 
-        return <a>+</a>
+        this.props.addTrack(this.props.track)
+    }
+    _removeTrack = (e) => {
+        e.preventDefault();
+        this.props.onRemove(this.props.track)
     }
     
 }
