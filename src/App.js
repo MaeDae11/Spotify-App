@@ -14,7 +14,6 @@ class App extends Component {
             searchResults: [],
             playlistName: '',
             playlistTracks: [],
-            message: ''
         }
     }
 
@@ -30,12 +29,9 @@ class App extends Component {
     addTrack = (track) => {
         if(this.state.playlistTracks.includes(track)){
             console.log("nope")
-            this.setState({
-                message: "This track is already in your list"
-            })
         } else {
-            let tracks = this.state.playlistTracks
-            tracks.push(track)
+            let tracks = this.state.playlistTracks;
+            tracks.push(track);
             this.setState({
                 playlistTracks: tracks
             })

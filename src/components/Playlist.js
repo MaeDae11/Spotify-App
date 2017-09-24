@@ -20,7 +20,7 @@ class Playlist extends Component {
                 <TrackList 
                     tracks={this.props.playlistTracks} 
                     isRemoval={this.state.isRemoval}
-                    onRemove={this.removeTrack}
+                    onRemove={this.props.removeTrack}
                 />
             <a className="Playlist-save">SAVE TO SPOTIFY</a>
         </div>
