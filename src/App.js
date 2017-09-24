@@ -14,6 +14,7 @@ class App extends Component {
             searchResults: [],
             playlistName: 'New Playlist',
             playlistTracks: [],
+            message: 'Add music to your playlist'
         }
     }
 
@@ -28,12 +29,15 @@ class App extends Component {
 
     addTrack = (track) => {
         if(this.state.playlistTracks.includes(track)){
-            console.log("nope")
+            this.setState({
+                message: `${track.name} has already been added`
+            })
         } else {
             let tracks = this.state.playlistTracks;
             tracks.push(track);
             this.setState({
-                playlistTracks: tracks
+                playlistTracks: tracks,
+                message: 'Add music to your playlist'
             });
         };
     }
@@ -69,7 +73,7 @@ class App extends Component {
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="search-container">
             <SearchBar spotifySearch={this.spotifySearch}/>
-
+            <div className="Error-Message">{this.state.message}</div>
 
             <div className="App-playlist">
                 <SearchResults 
