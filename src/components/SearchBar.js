@@ -24,9 +24,8 @@ class SearchBar extends Component {
             term: e.target.value
         });
     }
-    _handleSearch = (e) => {
+    _handleSearch = () => {
         this.props.spotifySearch(this.state.term)
-        e.preventDefault();
     }
 };
 

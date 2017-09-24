@@ -5,9 +5,6 @@ import TrackList from './TrackList.js';
 
 
 class Playlist extends Component {
-    constructor(props){
-        super(props);
-    }
 
     render(){
     
@@ -17,7 +14,7 @@ class Playlist extends Component {
                 <TrackList 
                     tracks={this.props.playlistTracks} 
                     isRemoval={true}
-                    onRemove={this.props.removeTrack}
+                    onRemove={this.props.onRemove}
                 />
             <a className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</a>
         </div>
