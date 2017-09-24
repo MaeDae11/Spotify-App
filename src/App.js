@@ -67,24 +67,25 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
-        <SearchBar spotifySearch={this.spotifySearch}/>
+        <div className="search-container">
+            <SearchBar spotifySearch={this.spotifySearch}/>
 
 
-        <div className="App-playlist">
-            <SearchResults 
-                searchResults={this.state.searchResults} 
-                onAdd={this.addTrack}
-            />
+            <div className="App-playlist">
+                <SearchResults 
+                    searchResults={this.state.searchResults} 
+                    onAdd={this.addTrack}
+                />
 
-            <Playlist 
-                playlistTracks={this.state.playlistTracks}
-                onRemove={this.removeTrack}
-                onNameChange={this.upsdatePlaylistName}
-                onSave={this.savePlaylist}
-            />
-
+                <Playlist 
+                    playlistTracks={this.state.playlistTracks}
+                    onRemove={this.removeTrack}
+                    onNameChange={this.upsdatePlaylistName}
+                    onSave={this.savePlaylist}
+                />
+        
+             </div>
         </div>
-
       </div>
     );
   }
