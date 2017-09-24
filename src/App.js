@@ -52,6 +52,14 @@ class App extends Component {
         });
     };
 
+    savePlaylist = () => {
+        let trackURI = []
+        this.state.playlistTracks.map((track) => {
+            trackURI.push(this.state.playlistTracks.uri)
+        });
+        return trackUrI
+    };
+
   render() {
     return (
       <div className="App">

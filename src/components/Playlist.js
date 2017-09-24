@@ -16,7 +16,7 @@ class Playlist extends Component {
     
         return(
         <div className="Playlist">
-            <input defaultValue={'New List'}/>
+            <input defaultValue={'New List'} onChange={this._handleNameChange}/>
                 <TrackList 
                     tracks={this.props.playlistTracks} 
                     isRemoval={this.state.isRemoval}
@@ -25,6 +25,10 @@ class Playlist extends Component {
             <a className="Playlist-save">SAVE TO SPOTIFY</a>
         </div>
         )
+    }
+
+    _handleNameChange = (e) => {
+        this.defaultValue = e.target.value
     }
 };
 
