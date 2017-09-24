@@ -13,7 +13,8 @@ class App extends Component {
         this.state = {
             searchResults: [],
             playlistName: '',
-            playlistTracks: []
+            playlistTracks: [],
+            message: ''
         }
     }
 
@@ -27,14 +28,18 @@ class App extends Component {
     };
 
     addTrack = (track) => {
-        let tracks = this.state.playlistTracks
-        // if(this.track.id in this.state.playlistTracks){
-        //     return
-        // }
-        tracks.push(track)
-        this.setState({
-            playlistTracks: tracks
-        })
+        if(this.state.playlistTracks.includes(track)){
+            console.log("nope")
+            this.setState({
+                message: "This track is already in your list"
+            })
+        } else {
+            let tracks = this.state.playlistTracks
+            tracks.push(track)
+            this.setState({
+                playlistTracks: tracks
+            })
+        }
     };
 
     removeTrack = (track) => {

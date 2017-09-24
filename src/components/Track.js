@@ -15,7 +15,7 @@ class Track extends Component {
     render(){
 
         return(
-        <div className="Track" key={this.props.key}>
+        <div className="Track" >
             <div className="Track-information">
                 <h3>{this.props.track.name}</h3>
                 <p>{this.props.track.artist} | {this.props.track.name}</p>
@@ -32,11 +32,9 @@ class Track extends Component {
         return <a className="Track-Action" onClick={this._addTrack}>+</a>
     }
     _addTrack = (e) => {
-        e.preventDefault();
-        this.props.addTrack(this.props.track)
+        this.props.onAdd(this.props.track)
     }
     _removeTrack = (e) => {
-        e.preventDefault();
         this.props.onRemove(this.props.track)
     }
     
