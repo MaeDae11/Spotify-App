@@ -26,22 +26,3 @@ class TrackList extends Component {
 
 export default TrackList
 
-
-// this.props.tracks.map((tracks) => {
-//     let track = {trackInfo}
-//     let name = trackInfo['name'];
-//     let id = trackInfo['id'];
-//     let artist = trackInfo['artist'];
-//     let album = trackInfo['album'];
-//     let uri = trackInfo['uri']
-//     return <Track 
-
-//         key={id}
-//         name={name}
-//         artist={artist}
-//         album={album}
-//         uri={uri}
-//         addTrack={this.props.addTrack}
-//         trackInfo={this.trackInfo}
-//     />
-// })
