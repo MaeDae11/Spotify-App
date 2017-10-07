@@ -1,5 +1,5 @@
-#Jammming
-
+<h1>Jammming</h1>
+<br />
 <h1>Overall</h1>
 <p>React application utilizing components for dynamic data without refresh of entire page.</p>
 <p>Features Spotify API to search a specific artist, album or song to render list of 20 songs that relate to search.</p>
