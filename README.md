@@ -12,17 +12,17 @@
 
 #Snapshots
 <h3>Desktop version of application with search results of Adele and adding a few songs to a new playlist.</h3>
-<img src="/images/destopsearch.png" alt="Desktop version of application with search results of Adele and adding a few songs to a new playlist">
+<img src="./src/images/deskopsearch.png" alt="Desktop version of application with search results of Adele and adding a few songs to a new playlist">
 <br />
 
 <h3>Mobile version of same search results.</h3>
-<img src="/images/moblesearch.png" alt="Mobile snapshot of Adele search result">
+<img src="./src/images/moblesearch.png" alt="Mobile snapshot of Adele search result">
 <br />
 
 <h3>Mobile version of playlist created through search results renamed as "Some of my favs".</h3>
-<img src="/images/mobilesearchplaylist.png" alt="playlist created within application">
+<img src="./src/images/mobilesearchplaylist.png" alt="playlist created within application">
 <br />
 
 <h3>Spotify application showing that "Some of my favs" playlist was directly added to Spotify account from Jammming application.</h3>
-<img src="/images/spotifyplaylist.png" alt="spotify screenshot showing playlist added from Jamming app">
+<img src="./src/images/spotifyplaylist.png" alt="spotify screenshot showing playlist added from Jamming app">
 <br />
