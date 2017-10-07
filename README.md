@@ -1,15 +1,15 @@
 <h1>Jammming</h1>
 <br />
-<h1>Overall</h1>
+<h2>Overall</h2>
 <p>React application utilizing components for dynamic data without refresh of entire page.</p>
 <p>Features Spotify API to search a specific artist, album or song to render list of 20 songs that relate to search.</p>
 <p>Implements Spotify OAuth2 so users can save playlists to their Spotify account.</p>
 <p>Install Yarn if branch</p>
 
-<h1>Difficulties</h1>
+<h2>Difficulties</h2>
 <ul>Adding Spotify OAuth2 while using access tokens for login. Searched documentation for best way to implement OAuth.</ul>
 
-<h1>Coding Snippets</h1>
+<h2>Coding Snippets</h2>
 <h3>Obtaining access token from Spotify API using personal client ID and window.location</h3>
 
 ``` javascript
@@ -69,7 +69,7 @@ getAccessToken() {
   
  ```
 
-<h1>Screenshots</h1>
+<h2>Screenshots</h2>
 <h3>Desktop version of application with search results of Adele and adding a few songs to a new playlist.</h3>
 <img src="./src/images/desktopsearch.png" height=400 alt="Desktop version of application with search results of Adele and adding a few songs to a new playlist">
 <br />
